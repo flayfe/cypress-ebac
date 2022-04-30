@@ -1,0 +1,25 @@
+{
+  "name": "cypress-ebac",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000c\u0000y\u0000p\u0000r\u0000e\u0000s\u0000s\u0000-\u0000e\u0000b\u0000a\u0000c\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "headless": "npm cypress run",
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flayfe/cypress-ebac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flayfe/cypress-ebac/issues"
+  },
+  "homepage": "https://github.com/flayfe/cypress-ebac#readme",
+  "devDependencies": {
+    "cypress": "^9.6.0",
+    "cypress-xpath": "^1.6.2"
+  }
+}
