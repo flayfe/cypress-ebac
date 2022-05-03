@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/flayfe/cypress-ebac#readme",
   "devDependencies": {
+    "@faker-js/faker": "^6.3.1",
     "cypress": "^9.6.0",
     "cypress-xpath": "^1.6.2"
   }

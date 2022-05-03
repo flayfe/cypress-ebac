@@ -18,7 +18,7 @@ context('Funcionalidade Login', () => {
         cy.xpath('//div[@class="woocommerce-MyAccount-content"]').should('contain', 'Olá, aluno_ebac')
     })
 
-    it.only('Deve exibir mensagem de erro ao inserir usuário inválido', () => {
+    it('Deve exibir mensagem de erro ao inserir usuário inválido', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type('alunoebac@teste.com')
@@ -28,7 +28,7 @@ context('Funcionalidade Login', () => {
         cy.get('.woocommerce-error').should('contain', 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário')
     })
 
-    it.only('Deve exibir mensagem de erro ao inserir senha inválida', () => {
+    it('Deve exibir mensagem de erro ao inserir senha inválida', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type('aluno_ebac@teste.com')
