@@ -17,7 +17,7 @@ describe('Funcionalidade página de produtos', () => {
         cy.xpath('//h1[@class="product_title entry-title"]').should('have.text', prod)
     });
 
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
         cy.get('#main-content')
             .contains(prod)
             .click()
@@ -33,5 +33,11 @@ describe('Funcionalidade página de produtos', () => {
         cy.xpath('//div[@role="alert"]').contains(qtd+' × “'+prod+'” foram adicionados no seu carrinho.')
     });
 
+    it('Deve adicionar um produto ao carrinho - Usando Commands', () => {
+        cy.addCart(prod,qtd)
+        
+        cy.xpath('//span[@class="mini-cart-items"]').contains(qtd)
+        cy.xpath('//div[@role="alert"]').contains(qtd+' × “'+prod+'” foram adicionados no seu carrinho.')
+   });
 
 });

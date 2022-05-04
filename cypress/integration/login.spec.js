@@ -31,7 +31,7 @@ context('Funcionalidade Login', () => {
         cy.xpath('//div[@class="woocommerce-MyAccount-content"]').should('contain', 'Olá, aluno_ebac')
     })
 
-    it.only('Deve fazer login com sucesso - Usando fixture', () => {
+    it('Deve fazer login com sucesso - Usando fixture', () => {
         cy.fixture('perfil').then(dados => {
             cy.xpath('//i[contains(@class,"unfollow")]').click()
             cy.get('#username').type(dados.usuário)
