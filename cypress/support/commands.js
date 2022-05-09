@@ -27,7 +27,7 @@
 Cypress.Commands.add('login', (usuário, senha) => {
     cy.xpath('//i[contains(@class,"unfollow")]').click()
     cy.get('#username').type(usuário)
-    cy.get('#password').type(senha)
+    cy.get('#password').type(senha, {log: false})
     cy.xpath('//form[contains(@class,"woocommerce-form-login")]/input[@type="submit"]').click()
 })
 

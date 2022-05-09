@@ -13,7 +13,7 @@ context('Funcionalidade Login', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type('aluno_ebac@teste.com')
-        cy.get('#password').type('teste@teste.com')
+        cy.get('#password').type('teste@teste.com', {log: false})
         cy.xpath('//form[contains(@class,"woocommerce-form-login")]/input[@type="submit"]').click()
 
         cy.xpath('//h1[@class="page-title"]').should('contain', 'Minha conta')
@@ -24,7 +24,7 @@ context('Funcionalidade Login', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type(perfil.usuário)
-        cy.get('#password').type(perfil.senha)
+        cy.get('#password').type(perfil.senha, {log: false})
         cy.xpath('//form[contains(@class,"woocommerce-form-login")]/input[@type="submit"]').click()
 
         cy.xpath('//h1[@class="page-title"]').should('contain', 'Minha conta')
@@ -47,7 +47,7 @@ context('Funcionalidade Login', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type('alunoebac@teste.com')
-        cy.get('#password').type('teste@teste.com')
+        cy.get('#password').type('teste@teste.com', {log: false})
         cy.xpath('//form[contains(@class,"woocommerce-form-login")]/input[@type="submit"]').click()
 
         cy.get('.woocommerce-error').should('contain', 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário')
@@ -57,7 +57,7 @@ context('Funcionalidade Login', () => {
 
         cy.xpath('//i[contains(@class,"unfollow")]').click()
         cy.get('#username').type('aluno_ebac@teste.com')
-        cy.get('#password').type('testetestecom')
+        cy.get('#password').type('testetestecom', {log: false})
         cy.xpath('//form[contains(@class,"woocommerce-form-login")]/input[@type="submit"]').click()
 
         cy.get('.woocommerce-error').should('contain', 'Erro: A senha fornecida para o e-mail aluno_ebac@teste.com está incorreta. Perdeu a senha?')
